@@ -14,6 +14,7 @@ attr_accessor :name
 # OR self.name = name || "Roberto"
   def initialize (name = "Roberto")
     @name = name
+# try self.name*****
   end
 # A robot instance should have a method called 'say_hi' and it should return "Hi!"
   def say_hi
@@ -23,6 +24,7 @@ attr_accessor :name
   # A robot instance should have a method called 'say_name' and it should return "My name is X" where X is the robot's name
   def say_name(text="I'm Cra a eeeeeeeeeee zeeeeeeeeeeey")
     "My name is #{self.name} #{text}."
+#try removing .self******
   end
 end
 
@@ -34,7 +36,7 @@ class BendingUnit < Robot
   # The bend method has one argument??? 'objecttobend'
   # The bend method should put to the console "Bend X!" where X is objecttobend
 
-  def bend (object)
+  def bend (object_to_be_bent)
    "Bend #{object}!"
   end
 
@@ -59,7 +61,7 @@ robot_name = BendingUnit.new(ARGV[0])
 
 object = ARGV[1]
 
-new_file = File.open("./#{robot_name}.html", "w+")
+new_file = File.open("./#{ARGV[0]}.html", "w+")
 
 # push new file, read html file
 new_file << ERB.new(File.read("index.html.erb")).result(binding)
