@@ -11,9 +11,9 @@ attr_accessor :name
 #OR def name
 #   "Roberto"
 # end
-# OR self.name = name || "Roberto"
-  def initialize (name = "Roberto")
-    @name = name
+# OR self.name = name
+  def initialize (value1)
+    @name = value1
 # try self.name*****
   end
 # A robot instance should have a method called 'say_hi' and it should return "Hi!"
@@ -21,8 +21,8 @@ attr_accessor :name
     "Hi!"
   end
 
-  # A robot instance should have a method called 'say_name' and it should return "My name is X" where X is the robot's name
-  def say_name(text="I'm Cra a eeeeeeeeeee zeeeeeeeeeeey")
+# A robot instance should have a method called 'say_name' and it should return "My name is X" where X is the robot's name
+  def say_name(text="I'm Cray E E E E E E E E Z")
     "My name is #{self.name} #{text}."
 #try removing .self******
   end
@@ -37,29 +37,27 @@ class BendingUnit < Robot
   # The bend method should put to the console "Bend X!" where X is objecttobend
 
   def bend (object_to_be_bent)
-   "Bend #{object}!"
+   "Bend #{object_to_be_bent}!"
   end
 
 end
 # Define an ActorUnit class
 # An ActorUnit inherits from Robot
-class AnchorUnit < Robot
+class ActorUnit < Robot
 
   # An ActorUnit instance has a method called 'change_name'
   # The 'changename' method accepts an argument 'newname'
   def change_name (newname)
+# The 'changename' method changes the name property of the robot to 'newname'
     @name = newname
   end
 end
-# The 'changename' method changes the name property of the robot to 'newname'
-name = Robot.new(name)
 
-
-# Output an index.html when running ruby robots.rb <name> <object>. Said page should use a BendingUnit with a name of <name> and use that BendingUnit to say hi, say their name and bend <object> and output all the above to HTML at <robot_name>.
+# Output an index.html when running ruby robots.rb name> <object>. Said page should use a BendingUnit with a name of <name> and use that BendingUnit to say hi, say their name and bend <object> and output all the above to HTML at <robot_name>.
 #html where <robot_name> is the <name> given on the command line.
-robot_name = BendingUnit.new(ARGV[0])
+bb88 = BendingUnit.new(ARGV[0])
 
-object = ARGV[1]
+object_to_be_bent = ARGV[1]
 
 new_file = File.open("./#{ARGV[0]}.html", "w+")
 
